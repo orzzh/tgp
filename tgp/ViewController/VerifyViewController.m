@@ -68,7 +68,7 @@
         _userAcc.font = [UIFont systemFontOfSize:13];
         _userAcc.textColor = [UIColor grayColor];
         _userAcc.textAlignment = 1;
-        _userAcc.text = @"13610688332";
+        _userAcc.text = @"136****8332";
     }
     return _userAcc;
 }
