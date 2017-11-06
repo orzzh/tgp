@@ -7,9 +7,10 @@
 //
 
 #import "VerifyViewController.h"
-
-@interface VerifyViewController ()
+#import "Define.h"
+@interface VerifyViewController ()<HideTrackDelegate>
 {
+    UIButton *cencel;
 }
 
 
@@ -24,16 +25,19 @@
 
 - (void)addUI{
    
-    [self.view addSubview:self.icon];
-    [self.view addSubview:self.userAcc];
-    
     CGFloat w = RECT_WEIGHT*3 + 40+ RECT_RADIUS_SPACE *2;
-    UIButton *cencel = [UIButton buttonWithType:UIButtonTypeSystem];
-    cencel.frame = CGRectMake(self.gesView.frame.origin.x+w/2+50,self.view.center.y+50+w/2,0, 40);
+    cencel = [UIButton buttonWithType:UIButtonTypeSystem];
+    cencel.frame = CGRectMake(self.gesView.frame.origin.x+w/2+50,self.view.center.y+60+w/2,0, 40);
     [cencel setTitle:@"返回密码登陆" forState:UIControlStateNormal];
+    [cencel setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
     [cencel sizeToFit];
     [cencel addTarget:self action:@selector(cencel) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:cencel];
+    
+    
+    [self.view addSubview:self.icon];
+    [self.view addSubview:self.userAcc];
+    [self.view addSubview:self.hideView];
 }
 
 
@@ -65,7 +69,7 @@
 - (UILabel *)userAcc{
     if (!_userAcc) {
         _userAcc = [[UILabel alloc]initWithFrame:CGRectMake(0, self.icon.frame.origin.y+self.icon.frame.size.height, S_WIDTH, 30)];
-        _userAcc.font = [UIFont systemFontOfSize:13];
+        _userAcc.font = [UIFont systemFontOfSize:16];
         _userAcc.textColor = [UIColor grayColor];
         _userAcc.textAlignment = 1;
         _userAcc.text = @"136****8332";
@@ -86,7 +90,14 @@
     return _icon;
 }
 
-
+- (HideTrackView *)hideView{
+    if (!_hideView) {
+        CGFloat w = RECT_WEIGHT*3 + 40+ RECT_RADIUS_SPACE *2;
+        _hideView = [[HideTrackView alloc]initWithFrame:CGRectMake(S_WIDTH-cencel.frame.origin.x-cencel.frame.size.width, self.view.center.y+60+w/2, 100, 40)];
+        _hideView.delegate = self;
+    }
+    return _hideView;
+}
 
 
 

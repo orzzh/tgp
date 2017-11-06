@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "VerifyViewController.h"
 #import "SetGesViewController.h"
-
+#import "DragRect.h"
 
 
 @interface ViewController ()<SetGesDelegate,VerifyGesDelegate>
@@ -107,6 +107,20 @@
     self.GesPass = [NSString stringWithFormat:@"%@",pass];
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

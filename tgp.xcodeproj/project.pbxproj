@@ -17,6 +17,9 @@
 		D602292B1F9F03FC000BBC06 /* RectView.m in Sources */ = {isa = PBXBuildFile; fileRef = D602292A1F9F03FC000BBC06 /* RectView.m */; };
 		D602292E1F9F0886000BBC06 /* Define.m in Sources */ = {isa = PBXBuildFile; fileRef = D602292D1F9F0886000BBC06 /* Define.m */; };
 		D69B9FE11FA1873A00643DFD /* SetHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = D69B9FE01FA1873A00643DFD /* SetHeadView.m */; };
+		D69C64B91FB04B130096CA89 /* HideTrackView.m in Sources */ = {isa = PBXBuildFile; fileRef = D69C64B71FB04B130096CA89 /* HideTrackView.m */; };
+		D69C64BC1FB04E5C0096CA89 /* GesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D69C64BB1FB04E5C0096CA89 /* GesManager.m */; };
+		D6D251591FAB160400F6B6D2 /* DragRect.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D251581FAB160400F6B6D2 /* DragRect.m */; };
 		D6DE36EF1FA04C6000B70020 /* ContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DE36EE1FA04C6000B70020 /* ContentView.m */; };
 		D6DE36F41FA06DB500B70020 /* GesBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DE36F31FA06DB500B70020 /* GesBaseViewController.m */; };
 		D6DE36F71FA0789800B70020 /* VerifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DE36F61FA0789800B70020 /* VerifyViewController.m */; };
@@ -55,6 +58,12 @@
 		D602292D1F9F0886000BBC06 /* Define.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Define.m; sourceTree = "<group>"; };
 		D69B9FDF1FA1873A00643DFD /* SetHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetHeadView.h; sourceTree = "<group>"; };
 		D69B9FE01FA1873A00643DFD /* SetHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetHeadView.m; sourceTree = "<group>"; };
+		D69C64B71FB04B130096CA89 /* HideTrackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HideTrackView.m; sourceTree = "<group>"; };
+		D69C64B81FB04B130096CA89 /* HideTrackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HideTrackView.h; sourceTree = "<group>"; };
+		D69C64BA1FB04E5C0096CA89 /* GesManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GesManager.h; sourceTree = "<group>"; };
+		D69C64BB1FB04E5C0096CA89 /* GesManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GesManager.m; sourceTree = "<group>"; };
+		D6D251571FAB160400F6B6D2 /* DragRect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DragRect.h; sourceTree = "<group>"; };
+		D6D251581FAB160400F6B6D2 /* DragRect.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DragRect.m; sourceTree = "<group>"; };
 		D6DE36ED1FA04C6000B70020 /* ContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContentView.h; sourceTree = "<group>"; };
 		D6DE36EE1FA04C6000B70020 /* ContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContentView.m; sourceTree = "<group>"; };
 		D6DE36F21FA06DB500B70020 /* GesBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GesBaseViewController.h; sourceTree = "<group>"; };
@@ -112,6 +121,9 @@
 				D60229061F9EFE18000BBC06 /* AppDelegate.m */,
 				D60229081F9EFE18000BBC06 /* ViewController.h */,
 				D60229091F9EFE18000BBC06 /* ViewController.m */,
+				D69C64BA1FB04E5C0096CA89 /* GesManager.h */,
+				D69C64BB1FB04E5C0096CA89 /* GesManager.m */,
+				D6D251531FAB140000F6B6D2 /* DragRect */,
 				D6FAA3991FA180F8006044EC /* ViewController */,
 				D6FAA39A1FA1810E006044EC /* Modules */,
 				D602290B1F9EFE18000BBC06 /* Main.storyboard */,
@@ -132,6 +144,15 @@
 			path = tgpUITests;
 			sourceTree = "<group>";
 		};
+		D6D251531FAB140000F6B6D2 /* DragRect */ = {
+			isa = PBXGroup;
+			children = (
+				D6D251571FAB160400F6B6D2 /* DragRect.h */,
+				D6D251581FAB160400F6B6D2 /* DragRect.m */,
+			);
+			path = DragRect;
+			sourceTree = "<group>";
+		};
 		D6FAA3991FA180F8006044EC /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +169,8 @@
 		D6FAA39A1FA1810E006044EC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				D69C64B81FB04B130096CA89 /* HideTrackView.h */,
+				D69C64B71FB04B130096CA89 /* HideTrackView.m */,
 				D6FAA3961FA17D49006044EC /* TipLable.h */,
 				D6FAA3971FA17D49006044EC /* TipLable.m */,
 				D6DE36ED1FA04C6000B70020 /* ContentView.h */,
@@ -266,11 +289,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D69C64BC1FB04E5C0096CA89 /* GesManager.m in Sources */,
+				D69C64B91FB04B130096CA89 /* HideTrackView.m in Sources */,
 				D6DE36EF1FA04C6000B70020 /* ContentView.m in Sources */,
 				D6DE36F71FA0789800B70020 /* VerifyViewController.m in Sources */,
 				D6FAA3981FA17D49006044EC /* TipLable.m in Sources */,
 				D602290A1F9EFE18000BBC06 /* ViewController.m in Sources */,
 				D60229151F9EFE18000BBC06 /* main.m in Sources */,
+				D6D251591FAB160400F6B6D2 /* DragRect.m in Sources */,
 				D69B9FE11FA1873A00643DFD /* SetHeadView.m in Sources */,
 				D6DE36F41FA06DB500B70020 /* GesBaseViewController.m in Sources */,
 				D602292B1F9F03FC000BBC06 /* RectView.m in Sources */,

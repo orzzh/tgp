@@ -14,16 +14,16 @@
 #define S_HEIGHT [UIScreen mainScreen].bounds.size.height
 
 /* 圆宽 */
-#define RECT_WEIGHT 60
+#define RECT_WEIGHT (S_HEIGHT > 667 ? 70 :60)
 
 /* 可点击 */
-#define RECT_WEIGHT_able 60
+#define RECT_WEIGHT_able (S_HEIGHT > 667 ? 70 :60)
 
 /* 弧度 */
 #define RECT_RADIUS RECT_WEIGHT/2
 
 /* 间距 */
-#define RECT_RADIUS_SPACE 35
+#define RECT_RADIUS_SPACE (S_HEIGHT > 667 ? 40 :35)
 
 /* 边框 */
 #define RECT_LINE_WEIGHT 2

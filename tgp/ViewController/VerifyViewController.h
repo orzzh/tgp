@@ -7,6 +7,7 @@
 //
 
 #import "GesBaseViewController.h"
+#import "HideTrackView.h"
 
 @protocol VerifyGesDelegate<NSObject>
 
@@ -21,6 +22,8 @@
 @property (nonatomic,strong)UIImageView *icon; //   头像
 
 @property (nonatomic,weak)id<VerifyGesDelegate> delegate;
+
+@property (nonatomic,strong)HideTrackView *hideView;//隐藏手势轨迹开关
 
 - (void)isSuccessGesPass:(BOOL)able; //yes 是正确密码
 

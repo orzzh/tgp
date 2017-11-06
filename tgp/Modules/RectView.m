@@ -7,7 +7,7 @@
 //
 
 #import "RectView.h"
-
+#import "GesManager.h"
 @implementation RectView
 {
     UIView *interview;
@@ -49,12 +49,13 @@
 
 - (void)selectRect{
    
-    if (!_isSelected) {
+    if (!_isSelected && ![GesManager getGesHidenOpen]) {
         interview.hidden = NO;
         interview.backgroundColor = RECT_COLORSELECT;
         radius.layer.borderColor = RECT_COLORSELECT.CGColor;
-        _isSelected = !_isSelected;
     }
+    _isSelected = !_isSelected;
+
 }
 
 

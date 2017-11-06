@@ -7,7 +7,7 @@
 //
 
 #import "ContentView.h"
-
+#import "GesManager.h"
 @interface ContentView()
 {
     UIBezierPath *path;
@@ -58,6 +58,7 @@
     }else{
         _CurrPoint = point;
     }
+    
     [self setNeedsDisplay];
 }
 
@@ -69,8 +70,9 @@
     [self mixNum];
     [self.RectArt removeAllObjects];
     [self setNeedsDisplay];
-
 }
+
+
 
 - (void)mixNum{
     NSMutableString *str = [[NSMutableString alloc]init];
@@ -79,6 +81,7 @@
         NSInteger idex = r.tag;
         NSString *s = [NSString stringWithFormat:@"%ld",idex];
         [str appendString:s];
+        NSLog(@"s%zd",_RectArt.count);
     }
     NSString *ss = [NSString stringWithFormat:@"%@",str];
     if (self.delegate && [self.delegate respondsToSelector:@selector(selectedWithNum:)]) {
@@ -88,6 +91,8 @@
 
 #pragma mark - 重绘连线
 - (void)drawRect:(CGRect)rect{
+    if (![GesManager getGesHidenOpen]) {
+
     CGContextRef ctx = UIGraphicsGetCurrentContext();
 
     if (self.RectArt.count == 0) {
@@ -110,7 +115,7 @@
     [path addLineToPoint:self.CurrPoint];
     CGContextAddPath(ctx, path.CGPath);
     CGContextStrokePath(ctx);
-    
+    }
 }
 
 - (RectView *)rectWithPoint:(CGPoint)point{
